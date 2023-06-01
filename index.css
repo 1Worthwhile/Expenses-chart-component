@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--Cream);
+  position: relative;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--Dark-brown);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.container {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.container nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 30px;
+  background: var(--Soft-red);
+  border-radius: 10px;
+}
+.container nav .txt p {
+  color: var(--Very-pale-orange);
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+.container nav .txt h4 {
+  color: var(--Very-pale-orange);
+  font-size: 20px;
+  font-weight: 500;
+}
+.container nav .img {
+  width: 50px;
+  height: 30px;
+}
+.container nav .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .chart_con {
+  width: 100%;
+  padding: 20px 35px;
+  background: var(--Very-pale-orange);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .chart_con h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--Dark-brown);
+}
+.container .chart_con .chart_bars {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(28, 10%, 53%, 0.4);
+}
+
+.container .chart_con .chart_bars .bar_can {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+.container .chart_con .chart_bars .bar_can .bar {
+  width: 30px;
+  height: 89px;
+  border-radius: 5px;
+  background: var(--Cyan);
+  z-index: 2;
+}
+
+.container .chart_con .chart_bars .bar_can:nth-child(1) .bar {
+  background: var(--Soft-red) !important;
+  height: 30px;
+}
+
+.container .chart_con .chart_bars .bar_can:nth-child(2) .bar {
+  background: var(--Soft-red) !important;
+  height: 60px;
+}
+.container .chart_con .chart_bars .bar_can:nth-child(4) .bar {
+  background: hsl(10, 79%, 65%, 0.5) !important;
+  height: 60px;
+}
+.container .chart_con .chart_bars .bar_can:nth-child(5) .bar {
+  background: hsl(10, 79%, 65%) !important;
+  height: 45px;
+}
+.container .chart_con .chart_bars .bar_can:nth-child(6) .bar {
+  background: hsl(10, 79%, 65%) !important;
+  height: 70px;
+}
+
+.container .chart_con .chart_bars .bar_can:nth-child(7) .bar {
+  background: hsl(10, 79%, 65%) !important;
+  height: 60px;
+}
+
+.container .chart_con .chart_bars .bar_can p:first-child {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  color: var(--Very-pale-orange);
+  background: var(--Dark-brown);
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  text-align: center;
+  z-index: 100;
+  transition: transform 0.5s ease;
+}
+
+.container .chart_con .chart_bars .bar_can:hover p:first-child {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.container .chart_con .chart_bars .bar_can p:last-child {
+  font-size: 13px;
+  padding-top: 5px;
+  text-align: center;
+  color: var(--Medium-brown);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+footer div:first-child p {
+  font-size: 12px;
+  color: var(--Medium-brown);
+}
+footer div:first-child h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--Dark-brown);
+}
+footer div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+footer div:last-child p:first-child {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+footer div:last-child p:last-child {
+  font-size: 12px;
+  color: var(--Medium-brown);
+}
+
+@media (max-width: 375px) {
+  .container .chart_con {
+    padding: 20px 20px;
+  }
+  footer div:first-child h3 {
+    font-size: 25px;
+  }
+}
